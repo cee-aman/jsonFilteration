@@ -1,0 +1,65 @@
+
+const vesselSchema = {
+  version: 0,
+  type: 'object',
+  primaryKey: 'trackpoint_id',
+  properties: {
+    ais_class: { type: 'string' },
+    mmsi: { type: 'number' },
+    trackpoint_id: { type: 'string', maxLength: 100  },
+    timestamp_updated: { type: 'string', format: 'date-time' },
+    msg_type: { type: 'number' },
+    source_id: { type: 'number' },
+    track_id: { type: 'string' },
+    latitude: { type: 'number' },
+    longitude: { type: 'number' },
+    cog: { type: 'number' },
+    sog: { type: 'number' },
+    navigation_status: { type: 'number' },
+    true_heading: { type: ['null', 'number'] },
+    geohash: { type: 'string' },
+    rate_of_turn: { type: ['null', 'number'] },
+    timestamp_received: { type: ['null', 'string'], format: 'date-time' },
+    imo: { type: 'number' },
+    name: { type: 'string' },
+    callsign: { type: ['null', 'string'] },
+    length: { type: ['null', 'number'] },
+    width: { type: ['null', 'number'] },
+    draught: { type: ['null', 'number'] },
+    statcode5: { type: ['null', 'string'] },
+    vessel_type: { type: 'number' },
+    warship: { type: ['null', 'boolean'] },
+    status: { type: ['null', 'string'] },
+    buildyear: { type: ['null', 'number'] },
+    tonnage_net: { type: ['null', 'number'] },
+    registry_port: { type: ['null', 'string'] },
+    owner: { type: ['null', 'string'] },
+    threat_index: { type: ['null', 'number'] },
+    vessel_id: { type: ['null', 'string'] },
+    vespar_id: { type: 'string' },
+    voyage_id: { type: ['null', 'string'] },
+    destination: { type: ['null', 'string'] },
+    eta: { type: ['null', 'string', 'number'] },
+    ship_cargo_id: { type: ['null', 'string'] },
+    flag_code: { type: 'string' },
+    mmsi_type: { type: 'string' },
+    public_records: { type: ['null', 'boolean'] },
+    internal_records: { type: ['null', 'boolean'] },
+    bhvr_algos: { type: ['null', 'object'] },
+    ml_algos: { type: ['null', 'object'] },
+    addl_info: {
+      type: 'object',
+      properties: {
+        lpc: { type: ['null', 'string'] }
+      }
+    },
+    onScreen: { type: 'boolean' },
+    alertsFilter: { type: 'boolean' },
+    visible: { type: 'boolean' },
+    overlays: { type: 'array' },
+    searchship: { type: 'boolean' },
+    ship_type: { type: 'string' }
+  }
+};
+
+export { vesselSchema  };

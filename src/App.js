@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { addRxPlugin } from 'rxdb';
+import { RxDBDevModePlugin } from 'rxdb/plugins/dev-mode';
+import MyApp from './myapp';
+import Basic from './basic';
+import JSONAATA from './jsonatatutorial'
 
 function App() {
+
+  addRxPlugin(RxDBDevModePlugin);
+
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Ideal way of doing  it</h1>
+    <Basic/>
+
+<MyApp/>
+    <h1>RXDB </h1>
+   
+<div>
+
+<h1>JSON AAATAAAAA </h1>
+<JSONAATA/>
+</div>
     </div>
   );
 }
